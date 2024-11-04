@@ -18,7 +18,7 @@ function App() {
     <Banner/>
     <Stats/>
     {/* <StudentFeedback/> */}
-    {/* <Achievement/> */}
+    <Achievement/>
     <SlidePricing/>
     <Newsletter/>
    <Footer/>

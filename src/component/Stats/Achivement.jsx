@@ -7,7 +7,7 @@ export function Achievement() {
             <p>Our</p>
             <p className="text-#365CCE">Achievement</p>
             <img
-              src={"require('/assets/bottom_vector.svg').default}"}
+              src={'/assets/bottom_vector.svg'}
               alt="image bottom vector"
               width={150}
               height={50}
@@ -93,7 +93,7 @@ export function Achievement() {
           </div>
           <div className="relative">
             <img
-              src={'/assets/images/img1.png'}
+              src={'https://i.ibb.co/d76VSXR/How-to-Prevent-UTIs-Common-Myths-and-Facts-2.png'}
               alt="image"
               height={222}
               width={332}
