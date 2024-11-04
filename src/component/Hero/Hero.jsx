@@ -3,119 +3,53 @@ function Hero() {
     const [menu, setMenu] = useState(false);
     return (
         <>
-            <div className="relative w-full h-full pb-10 ">
-                <div className="hidden md:block">
-                    <img className="absolute bg-cover bg-center w-full h-full inset-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Hero%2008.png" alt />
-                </div>
-                {/* <nav className="lg:hidden relative z-50">
-                    <div className="flex py-2 justify-between items-center px-4">
-                        <div>
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg1.svg" alt="logo" />
-                        </div>
-                        <div className="visible flex items-center">
-                            <button id="open" onClick={() => setMenu(!menu)} className={` ${menu ? 'hidden' : ''} focus:outline-none focus:ring-2 focus:ring-black`}>
-                                <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg2.svg" alt="menu" />
-                            </button>
-                            <ul id="list" className={` ${menu ? '' : 'hidden'} p-2 border-r bg-white absolute rounded top-0 left-0 right-0 shadow mt-24`}>
-                                <li className="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
-                                    <a href="javascript: void(0)" className="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
-                                        <span className="font-bold">Home</span>
-                                    </a>
-                                </li>
-                                <li className="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
-                                    <a href="javascript: void(0)" className="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
-                                        <span className="font-bold">About Us</span>
-                                    </a>
-                                </li>
-                                <li className="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
-                                    <a href="javascript: void(0)" className="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
-                                        <span className="font-bold">Pricing</span>
-                                    </a>
-                                </li>
-                                <li className="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
-                                    <a href="javascript: void(0)" className="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
-                                        <span className="font-bold">Resources</span>
-                                    </a>
-                                </li>
-                                <li className="flex cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none" onclick="dropdownHandler(this)">
-                                    <a href="javascript: void(0)" className="ml-2 focus:outline-none focus:ring-2 focus:ring-black">
-                                        <span className="font-bold">Sign In</span>
-                                    </a>
-                                </li>
-                            </ul>
-                            <div className="xl:hidden">
-                                <button id="close" className={` ${menu ? '' : 'hidden'} close-m-menu focus:ring-2 focus:ring-black focus:outline-none`} onClick={() => setMenu(!menu)}>
-                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg3.svg" alt="close" />
-                                </button>
+            <div className="relative w-full rounded-xl">
+                <div className="relative bg-yellow-50 w-full">
+                    <div className="w-full px-6 pt-32 md:px-12 lg:pt-[4.8rem] lg:px-7">
+                        <div className="flex items-center flex-wrap px-2 md:px-0">
+                            <div className="relative w-full lg:w-6/12 lg:py-24 xl:py-32">
+                                <h1 className="font-bold text-4xl text-yellow-900 md:text-5xl w-full lg:w-10/12">
+                                    Your favorite dishes, right at your door
+                                </h1>
+                                <form action="" className="w-full mt-12">
+                                    <div className="relative flex p-1 rounded-full bg-white border border-yellow-200 shadow-md md:p-2">
+                                        <select className="hidden p-3 rounded-full bg-transparent md:block md:p-4" name="domain" id="domain">
+                                            <option value="design">FastFood</option>
+                                            <option value="restaurant">Restaurant</option>
+                                            <option value="grocery">Grocery</option>
+                                        </select>
+                                        <input placeholder="Your favorite food" className="w-full p-4 rounded-full" type="text" />
+                                        <button
+                                            type="button"
+                                            title="Start buying"
+                                            className="ml-auto py-3 px-6 rounded-full text-center transition bg-gradient-to-b from-yellow-200 to-yellow-300 hover:to-red-300 active:from-yellow-400 focus:from-red-400 md:px-12"
+                                        >
+                                            <span className="hidden text-yellow-900 font-semibold md:block">
+                                                Search
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 mx-auto text-yellow-900 md:hidden" fill="currentColor" viewBox="0 0 16 16">
+                                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </form>
+                                <p className="mt-8 text-gray-700 lg:w-10/12">
+                                    Sit amet consectetur adipisicing elit.{" "}
+                                    <a href="#" className="text-yellow-700">connection</a> tenetur nihil quaerat suscipit, sunt dignissimos.
+                                </p>
+                            </div>
+                            <div className="w-full lg:w-6/12 flex justify-center lg:justify-end -mb-24 lg:-mb-56">
+                                <img
+                                    src="https://tailus.io/sources/blocks/food-delivery/preview/images/food.webp"
+                                    className="relative max-w-full"
+                                    alt="food illustration"
+                                    loading="lazy"
+                                />
                             </div>
                         </div>
                     </div>
-                </nav> */}
-                {/* <nav className="f-f-l relative z-10">
-                    <div className="relative z-10 mx-auto container hidden w-full px-4 xl:px-0 lg:flex justify-between items-center py-11">
-                        <div>
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg4.svg" alt="logo" />
-                        </div>
-                        <div className="flex items-center text-white text-base font-medium">
-                            <ul className="flex items-center pr-3 xl:pr-12">
-                                <li className="cursor-pointer hover:text-gray-300 ease-in">
-                                    <a href="javascript:void(0)" className="focus:outline-none focus:ring-2 focus:ring-white">Home</a>
-                                </li>
-                                <li className="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in">
-                                    <a href="javascript:void(0)" className="focus:outline-none focus:ring-2 focus:ring-white">About Us</a>
-                                </li>
-                                <li className="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in">
-                                    <a href="javascript:void(0)" className="focus:outline-none focus:ring-2 focus:ring-white">Pricing</a>
-                                </li>
-                                <li className="pl-3 lg:pl-5 xl:pl-8 cursor-pointer hover:text-gray-300 ease-in">
-                                    <a href="javascript:void(0)" className="focus:outline-none focus:ring-2 focus:ring-white">Resources</a>
-                                </li>
-                            </ul>
-                            <button className="px-6 py-3 bg-indigo-400 hover:bg-indigo-500 text-white text-base font-medium rounded-lg flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700">
-                                Sign In
-                                <img className="ml-4" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/large_typography_with_gradient_and_glass_effect_Svg5.svg" alt="arrow" />
-                            </button>
-                        </div>
-                    </div>
-                </nav> */}
-                <div className="relative px-4 xl:px-0 container mx-auto md:flex items-center gap-8">
-                    <div className="text-color w-full md:w-1/3 pt-16 lg:pt-32 xl:pt-12">
-                        <h1 className="text-4xl md:text-4xl lg:text-6xl w-11/12 lg:w-11/12 xl:w-full xl:text-6xl text-gray-900 font-extrabold f-f-l">Build, review and ship with ease</h1>
-                        <div className="f-f-r text-base lg:text-base pb-20 sm:pb-0 pt-10 xl:pt-6">
-                            <h2>The next big thing starts here. Start building with Prodify and be the first to market with a product that is ready to take on the competition and delight your customers</h2>
-                        </div>
-                        <div className="lg:flex">
-                            <button className="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Start building now</button>
-                            <button className="hidden md:block hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 lg:ml-2 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-200 text-indigo-600 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Try it out</button>
-                        </div>
-                    </div>
-                    <img className="w-full mt-8 md:mt-0 object-fill md:w-2/3 md:-ml-4 lg:-ml-4 xl:ml-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/Graphic.png" alt="sample page" role="img" />
-                    <button className="md:hidden hover:opacity-90 text-base w-full xl:text-base xl:w-6/12 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-700 text-white font-bold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Start building now</button>
-                    <button className="md:hidden hover:opacity-90 text-base w-full xl:text-base xl:w-4/12 xl:ml-2 mt-4 xl:mt-8 f-f-r py-4  bg-indigo-200 text-indigo-600 font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-lg">Try it out</button>
                 </div>
             </div>
-
-
-            <style>{`
-        .top-100 {
-            animation: slideDown .5s ease-in-out;
-        }
-
-        @keyframes slideDown {
-            0% {
-                top: -50%;
-            }
-
-            100% {
-                top: 0;
-            }
-        }
-
-        * {
-            outline: none !important;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            -webkit-tap-highlight-color: transparent;
-        } `}</style>
         </>
     );
 }

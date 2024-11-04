@@ -77,7 +77,7 @@ const Cursor = ({ hovered, scope }) => {
       }}
       transition={{ duration: 0.15 }}
       ref={scope}
-      className="pointer-events-none absolute z-0 grid h-[50px] w-[50px] origin-[0px_0px] place-content-center rounded-full bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 text-2xl"
+      className="pointer-events-none absolute z-0 grid h-[50px] w-[50px] origin-[0px_0px] place-content-center rounded-full bg-gradient-to-br from-orange-600 from-40% to-orange-400 text-2xl"
     >
       <FiArrowUpRight className="text-white" />
     </motion.span>
@@ -104,7 +104,7 @@ const GlassLink = ({ text }) => {
       href="#"
       className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95"
     >
-      <span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
+      <span className="relative z-10 text-brown-400  font-bold transition-colors group-hover:text-white">
         {text}
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
@@ -126,7 +126,7 @@ const Buttons = ({ setMenuOpen }) => (
       <SignInButton />
     </div>
 
-    <button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-indigo-600 from-40% to-indigo-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95">
+    <button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-orange-600 from-40% to-orange-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95">
       Try free
     </button>
 
