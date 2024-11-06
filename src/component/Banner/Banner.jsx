@@ -1,10 +1,12 @@
 import React from "react";
 
 function Banner() {
+
+  
   return (
     <>
       {/* <div className="bg-gray-200 "> */}
-        <div className="px-3 py-12">
+        <div className="px-3 py-12 mt-10">
           <div className="lg:max-w-[1280px] md:max-w-[696px] max-w-[343px] mx-auto bg-white lg:px-20 md:px-6 px-4 py-12">
             <div className="lg:flex md:flex block">
               <div className="flex">

@@ -1,27 +1,24 @@
 import './App.css'
-import Banner from './component/Banner/Banner'
-import StudentFeedback from './component/Feedback/StudentFeedback'
 import Footer from './component/Footer/Footer'
 import Header from './component/Header/GlassNav'
-import Hero from './component/Hero/Hero'
-import Newsletter from './component/Newsletter/Newsletter'
-import SlidePricing from './component/Pricing/SliderPricing'
-import { Achievement } from './component/Stats/Achivement'
-import Stats from './component/Stats/Stats'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Home } from './Pages/Home';
+import { Signup } from './Pages/Signup';
+import { Signin } from './Pages/Signin';
 
 function App() {
 
   return (
     <>
-    <Header/>
-    <Hero/>
-    <Banner/>
-    <Stats/>
-    {/* <StudentFeedback/> */}
-    <Achievement/>
-    <SlidePricing/>
-    <Newsletter/>
-   <Footer/>
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Signup" element={<Signup />} />
+          <Route path="/Signin" element={<Signin />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   )
 }

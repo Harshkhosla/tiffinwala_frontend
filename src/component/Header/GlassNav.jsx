@@ -2,11 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import { useAnimate, motion } from "framer-motion";
 import { FiMenu, FiArrowUpRight } from "react-icons/fi";
 import useMeasure from "react-use-measure";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { Loggingout } from "../../redux/userSlice";
+
+
 
 const Header = () => {
   return (
 
-      <GlassNavigation />
+    <GlassNavigation />
 
   );
 };
@@ -16,6 +21,10 @@ const GlassNavigation = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const [scope, animate] = useAnimate();
+
+  const data = useSelector((state) => state.data.token)
+  console.log(data, "dskvsbvdvs");
+
   const navRef = useRef(null);
 
   const handleMouseMove = ({ offsetX, offsetY, target }) => {
@@ -49,7 +58,7 @@ const GlassNavigation = () => {
         cursor: hovered ? "none" : "auto",
       }}
       className="glass-nav fixed left-0 right-0 top-0 z-10 mx-auto max-w-6xl overflow-hidden border-[1px] border-orange-200/20 bg-gradient-to-br from-orange-500/20 to-orange-300/10 backdrop-blur md:left-6 md:right-6 md:top-6 md:rounded-2xl"
-      >
+    >
       <div className="glass-nav flex items-center justify-between px-5 py-5">
         <Cursor hovered={hovered} scope={scope} />
 
@@ -57,7 +66,7 @@ const GlassNavigation = () => {
 
         <Logo />
 
-        <Buttons setMenuOpen={setMenuOpen} />
+        <Buttons setMenuOpen={setMenuOpen} data={data} />
       </div>
 
       <MobileMenu menuOpen={menuOpen} />
@@ -71,9 +80,8 @@ const Cursor = ({ hovered, scope }) => {
       initial={false}
       animate={{
         opacity: hovered ? 1 : 0,
-        transform: `scale(${
-          hovered ? 1 : 0
-        }) translateX(-50%) translateY(-50%)`,
+        transform: `scale(${hovered ? 1 : 0
+          }) translateX(-50%) translateY(-50%)`,
       }}
       transition={{ duration: 0.15 }}
       ref={scope}
@@ -85,9 +93,9 @@ const Cursor = ({ hovered, scope }) => {
 };
 
 const Logo = () => (
-    <>
-    <img scr ={"/assets/images/logo.png"}/>
-    </>
+  <>
+    <img src="/assets/logo.png" className="xs:w-20 w-36 md:w-48   " />
+  </>
   // <span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-white mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
   //   logo.
   // </span>
@@ -123,29 +131,49 @@ const TextLink = ({ text }) => {
   );
 };
 
-const Buttons = ({ setMenuOpen }) => (
-  <div className="flex items-center gap-4">
-    <div className="hidden md:block">
-      <SignInButton />
+
+const Buttons = ({ setMenuOpen, data }) => {
+  const dispatch = useDispatch()
+  const navigation = useNavigate();
+  const Logout = () => {
+    dispatch(Loggingout())
+  }
+
+
+  return <>
+    <div className="flex items-center gap-4">
+      {
+        !data ?
+          <>
+            <Link to="/Signup" className="hidden md:block">
+              <SignInButton />
+            </Link>
+
+            <button onClick={()=>navigation("/Signin")} className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-orange-600 from-40% to-orange-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95">
+              Try free
+            </button>
+
+            <button
+              onClick={() => setMenuOpen((pv) => !pv)}
+              className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
+            >
+              <FiMenu />
+            </button>
+          </>
+          : <>
+            <button onClick={Logout} className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-orange-600 from-40% to-orange-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95">
+              Log Out
+            </button>
+          </>
+      }
     </div>
-
-    <button className="relative scale-100 overflow-hidden rounded-lg bg-gradient-to-br from-orange-600 from-40% to-orange-400 px-4 py-2 font-medium text-white transition-transform hover:scale-105 active:scale-95">
-      Try free
-    </button>
-
-    <button
-      onClick={() => setMenuOpen((pv) => !pv)}
-      className="ml-2 block scale-100 text-3xl text-white/90 transition-all hover:scale-105 hover:text-white active:scale-95 md:hidden"
-    >
-      <FiMenu />
-    </button>
-  </div>
-);
+  </>
+}
 
 const SignInButton = () => {
   return (
     <button className="group relative scale-100 overflow-hidden rounded-lg px-4 py-2 transition-transform hover:scale-105 active:scale-95">
-      <span className="relative z-10 text-white/90 transition-colors group-hover:text-white">
+      <span className="relative z-10 text-yellow-500 transition-colors group-hover:text-white">
         Sign in
       </span>
       <span className="absolute inset-0 z-0 bg-gradient-to-br from-white/20 to-white/5 opacity-0 transition-opacity group-hover:opacity-100" />
