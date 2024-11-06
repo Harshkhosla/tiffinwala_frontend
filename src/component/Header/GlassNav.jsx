@@ -10,9 +10,7 @@ import { Loggingout } from "../../redux/userSlice";
 
 const Header = () => {
   return (
-
     <GlassNavigation />
-
   );
 };
 
@@ -94,7 +92,9 @@ const Cursor = ({ hovered, scope }) => {
 
 const Logo = () => (
   <>
+  <Link to="/">
     <img src="/assets/logo.png" className="xs:w-20 w-36 md:w-48   " />
+  </Link>
   </>
   // <span className="pointer-events-none relative left-0 top-[50%] z-10 text-4xl font-black text-white mix-blend-overlay md:absolute md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]">
   //   logo.
