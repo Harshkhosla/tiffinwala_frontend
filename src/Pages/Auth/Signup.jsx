@@ -1,9 +1,9 @@
 import { useCallback, useState } from "react"
-import { Input } from "../component/input/Input"
-import { submitUserData } from "../redux/userSlice"
+import { Input } from "../../component/input/Input"
+import { submitUserData } from "../../redux/userSlice"
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import useApi from "../hooks/useApi";
+import useApi from "../../hooks/useApi";
 
 export const Signup = () => {
 

@@ -1,49 +1,277 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MdOutlineStar } from 'react-icons/md';
 import { HiArrowUpRight } from 'react-icons/hi2';
+import { useNavigate } from 'react-router-dom';
 
-const PopularCourseData = [
+const TiffinPlansData = [
   {
-    title: 'Mastering HTML5',
-    img_path: '/assets/images/course/course_img1.png',
+    title: '7 Days Basic Tiffin Plan',
+    img_path: 'https://example.com/images/tiffin/7days.jpg',
     star: 4,
-    reviewCount: 12,
-    tag: 'HTML',
-    price: 3000,
+    reviewCount: 15,
+    price: 800,
+    category: 'Tiffin Service',
+    description: 'Enjoy fresh, home-style meals for a week. Ideal for those wanting a short-term meal solution.',
+    benefits: [
+      'Fresh meals daily',
+      'No commitment beyond 7 days',
+      'Free delivery at your convenience',
+    ],
+    quantity: 1,
+    dimensions: {
+      weight: '1kg per meal',
+      servings: 'One-person servings',
+    },
+    features: [
+      {
+        icon: '🍹',
+        title: 'Fresh Ingredients',
+        text: 'Sourced daily to ensure freshness in every meal.',
+      },
+      {
+        icon: '🍽️',
+        title: 'Eco-friendly Packaging',
+        text: 'Meals are packed in biodegradable containers.',
+      },
+      {
+        icon: '🕒',
+        title: 'On-time Delivery',
+        text: 'Meals delivered at a time convenient to you.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 1
   },
   {
-    title: 'JavaScript for Beginners',
-    img_path: '/assets/images/course/course_img2.png',
-    star: 5,
-    reviewCount: 25,
-    tag: 'JavaScript',
-    price: 4500,
-  },
-  {
-    title: 'Complete React Guide',
-    img_path: '/assets/images/course/course_img3.png',
+    title: '15 Days Standard Tiffin Plan',
+    img_path: 'https://example.com/images/tiffin/15days.jpg',
     star: 4.5,
-    reviewCount: 40,
-    tag: 'React',
-    price: 5500,
+    reviewCount: 30,
+    price: 1500,
+    category: 'Tiffin Service',
+    description: 'Our 15-day plan offers nutritious, tasty meals ideal for busy professionals or students.',
+    benefits: [
+      'Affordable and balanced meal plan',
+      'Customizable for dietary needs',
+      'High-quality ingredients with doorstep delivery',
+    ],
+    quantity: 1,
+    dimensions: {
+      weight: '1kg per meal',
+      servings: 'One-person servings',
+    },
+    features: [
+      {
+        icon: '💪',
+        title: 'Nutritious Meals',
+        text: 'Balanced meals with essential nutrients.',
+      },
+      {
+        icon: '🚚',
+        title: 'Free Delivery',
+        text: 'Get your meals delivered to your doorstep without extra charges.',
+      },
+      {
+        icon: '♻️',
+        title: 'Eco-friendly Packaging',
+        text: 'Meals are delivered in biodegradable containers.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 2
   },
   {
-    title: 'Node.js Development',
-    img_path: '/assets/images/course/course_img1.png',
+    title: '30 Days Premium Tiffin Plan',
+    img_path: 'https://example.com/images/tiffin/30days.jpg',
+    star: 5,
+    reviewCount: 50,
+    price: 2800,
+    category: 'Tiffin Service',
+    description: 'A month-long plan with a wide variety of dishes to keep meals exciting and healthy.',
+    benefits: [
+      'Best value for frequent customers',
+      'Daily variety of meals',
+      'Prioritized delivery and customer support',
+    ],
+    quantity: 1,
+    dimensions: {
+      weight: '1kg per meal',
+      servings: 'One-person servings',
+    },
+    features: [
+      {
+        icon: '🌟',
+        title: 'Variety of Dishes',
+        text: 'New dishes every day to keep meals interesting.',
+      },
+      {
+        icon: '🛡️',
+        title: 'Health-focused',
+        text: 'Meals designed to support a healthy lifestyle.',
+      },
+      {
+        icon: '💼',
+        title: 'Priority Support',
+        text: 'Dedicated support for long-term customers.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 3
+  },
+  {
+    title: 'Lunch Only Plan - 7 Days',
+    img_path: 'https://example.com/images/tiffin/lunch7days.jpg',
+    star: 4,
+    reviewCount: 10,
+    price: 500,
+    category: 'Lunch Tiffin',
+    description: 'Convenient lunch-only plan for a week. Perfect for individuals needing lunch at work or home.',
+    benefits: [
+      'Simple and affordable',
+      'Delicious, fulfilling lunches',
+      'Ideal for office-goers and students',
+    ],
+    quantity: 1,
+    dimensions: {
+      weight: '1kg per meal',
+      servings: 'One-person servings',
+    },
+    features: [
+      {
+        icon: '🍛',
+        title: 'Fulfilling Lunch',
+        text: 'Hearty meals designed to keep you full through the day.',
+      },
+      {
+        icon: '🥗',
+        title: 'Balanced Diet',
+        text: 'Includes a mix of carbs, proteins, and greens.',
+      },
+      {
+        icon: '🚀',
+        title: 'Quick Delivery',
+        text: 'Lunches delivered right in time for your lunch break.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 4
+  },
+  {
+    title: 'Dinner Only Plan - 15 Days',
+    img_path: 'https://example.com/images/tiffin/dinner15days.jpg',
     star: 4.2,
     reviewCount: 18,
-    tag: 'Node.js',
-    price: 6000,
+    price: 1000,
+    category: 'Dinner Tiffin',
+    description: 'Dinner-only plan for 15 days, offering balanced and wholesome meals every night.',
+    benefits: [
+      'Healthy dinners delivered daily',
+      'Perfect for individuals with busy evenings',
+      'Free delivery after work hours',
+    ],
+    quantity: 1,
+    dimensions: {
+      weight: '1kg per meal',
+      servings: 'One-person servings',
+    },
+    features: [
+      {
+        icon: '🍲',
+        title: 'Hearty Dinners',
+        text: 'Warm, filling meals to end your day.',
+      },
+      {
+        icon: '🥘',
+        title: 'Wholesome Ingredients',
+        text: 'Includes proteins, veggies, and grains for a balanced meal.',
+      },
+      {
+        icon: '🌜',
+        title: 'Evening Delivery',
+        text: 'Deliveries timed for dinner hours.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 5
   },
   {
-    title: 'UI/UX Design',
-    img_path: '/assets/images/course/course_img2.png',
+    title: 'Monthly Family Plan (2 Members)',
+    img_path: 'https://example.com/images/tiffin/family2.jpg',
     star: 4.8,
-    reviewCount: 50,
-    tag: 'Design',
+    reviewCount: 35,
     price: 5000,
+    category: 'Family Tiffin',
+    description: 'A monthly tiffin service for two, perfect for small families seeking a convenient meal solution.',
+    benefits: [
+      'Balanced meals for two',
+      'Great savings for family plans',
+      'Flexible meal options for family needs',
+    ],
+    quantity: 2,
+    dimensions: {
+      weight: '1.5kg per meal',
+      servings: 'Two-person servings',
+    },
+    features: [
+      {
+        icon: '👫',
+        title: 'Family-friendly Portions',
+        text: 'Sized appropriately for two people.',
+      },
+      {
+        icon: '💸',
+        title: 'Great Savings',
+        text: 'Affordable for families with busy schedules.',
+      },
+      {
+        icon: '🗓️',
+        title: 'Monthly Convenience',
+        text: 'No need to worry about daily orders.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 6
   },
+  {
+    title: 'Monthly Family Plan (4 Members)',
+    img_path: 'https://example.com/images/tiffin/family4.jpg',
+    star: 4.9,
+    reviewCount: 45,
+    price: 9000,
+    category: 'Family Tiffin',
+    description: 'A convenient monthly meal plan designed for families of four with a variety of dishes.',
+    benefits: [
+      'Delicious meals for the entire family',
+      'Affordable family-sized portions',
+      'Wide variety to satisfy everyone',
+    ],
+    quantity: 4,
+    dimensions: {
+      weight: '2.5kg per meal',
+      servings: 'Four-person servings',
+    },
+    features: [
+      {
+        icon: '👨‍👩‍👧‍👦',
+        title: 'Perfect for Families',
+        text: 'Meals sized to feed four people.',
+      },
+      {
+        icon: '🍴',
+        title: 'Wide Variety',
+        text: 'Different meals to suit everyone’s tastes.',
+      },
+      {
+        icon: '🎉',
+        title: 'Family Specials',
+        text: 'Includes special family-sized dishes on weekends.',
+      },
+    ],
+    buttonText: 'Add to Tiffin Bag',
+    id: 7
+  }
 ];
+
 
 
 function PopularCourseSlider() {
@@ -55,7 +283,7 @@ function PopularCourseSlider() {
             <div className="text-2xl md:text-3xl lg:text-[40px] font-semibold flex lg:flex-col gap-2 relative">
               <p>Most</p>
               <p className="text-#365CCE">Popular</p>
-              <p className="text-#365CCE">Course</p>
+              <p className="text-#365CCE">Tiffin</p>
               <img
                 src="/assets/bottom_vector.svg"
                 alt="image bottom vector"
@@ -65,11 +293,11 @@ function PopularCourseSlider() {
               />
             </div>
             <Slider width={290}>
-              {PopularCourseData.map((course, index) => (
+              {TiffinPlansData.map((course, index) => (
                 <CourseCard key={index} item={course} />
               ))}
             </Slider>
-            <div className="hidden xl:block absolute h-[350px] w-60 bg-white opacity-80 top-4 right-0 z-50 rounded-xl "></div>
+            {/* <div className="hidden xl:block absolute h-[350px] w-60 bg-white opacity-80 top-4 right-0 z-50 rounded-xl "></div> */}
           </div>
         </div>
       </div>
@@ -77,6 +305,14 @@ function PopularCourseSlider() {
   );
 }
 function CourseCard({ item }) {
+  console.log(item.id);
+
+  const navigator = useNavigate();
+
+  const Navigation = (item) => {
+    console.log(item, "sdkvdhsbshjvb");
+    navigator(`/tiffin/${item?.id}`,{state:{item}})
+  }
   return (
     <div className="bg-white max-w-[250px] sm:max-w-[280px] rounded-2xl shadow-custom-box-shadow  hover:shadow-card select-none">
       <div className="p-4">
@@ -84,7 +320,7 @@ function CourseCard({ item }) {
           <img
             src={item?.img_path}
             alt="image"
-            width={280}
+            width={210}
             height={207}
             className="rounded-lg"
           />
@@ -114,7 +350,7 @@ function CourseCard({ item }) {
         <div>
           <p className="sm:text-2xl font-semibold">$ {item?.price}</p>
         </div>
-        <div className="p-[10px] shadow-custom-box-shadow cursor-pointer hover:bg-#365CCE hover:text-white  rounded-lg transition duration-300 ease-in-out">
+        <div className="p-[10px] shadow-custom-box-shadow cursor-pointer hover:bg-orange-400 hover:text-white  rounded-lg transition duration-300 ease-in-out" onClick={() => Navigation(item)}>
           <HiArrowUpRight />
         </div>
       </div>
@@ -249,9 +485,8 @@ function Slider({ children, width, isUpdateWidth = false }) {
           {Array.from({ length: totalItems }).map((_, index) => (
             <div
               key={index}
-              className={`w-3 h-3 rounded-full cursor-pointer ${
-                index === currentIndex ? 'bg-#365CCE' : 'bg-gray-300'
-              }`}
+              className={`w-3 h-3 rounded-full cursor-pointer ${index === currentIndex ? 'bg-#365CCE' : 'bg-gray-300'
+                }`}
               onClick={() => handleDotClick(index)}
             />
           ))}

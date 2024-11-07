@@ -1,10 +1,10 @@
 
 import { useCallback, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Input } from "../component/input/Input";
-import { login } from "../redux/userSlice";
+import { Input } from "../../component/input/Input";
+import { login } from "../../redux/userSlice";
 import { useDispatch } from "react-redux";
-import useApi from "../hooks/useApi";
+import useApi from "../../hooks/useApi";
 
 export const Signin = () => {
 
