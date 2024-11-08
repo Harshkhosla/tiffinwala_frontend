@@ -6,152 +6,136 @@ import { useNavigate } from 'react-router-dom';
 const TiffinPlansData = [
   {
     title: '7 Days Basic Tiffin Plan',
-    img_path: 'https://example.com/images/tiffin/7days.jpg',
+    img_path: 'https://b.zmtcdn.com/data/o2_assets/52eb9796bb9bcf0eba64c643349e97211634401116.png',
     star: 4,
     reviewCount: 15,
     price: 800,
     category: 'Tiffin Service',
     description: 'Enjoy fresh, home-style meals for a week. Ideal for those wanting a short-term meal solution.',
-    benefits: [
-      'Fresh meals daily',
-      'No commitment beyond 7 days',
-      'Free delivery at your convenience',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Fresh meals daily' },
+          { label: 'Benefit', value: 'No commitment beyond 7 days' },
+          { label: 'Benefit', value: 'Free delivery at your convenience' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '1kg per meal' },
+          { label: 'Servings', value: 'One-person servings' }
+        ]
+      }
     ],
     quantity: 1,
-    dimensions: {
-      weight: '1kg per meal',
-      servings: 'One-person servings',
-    },
     features: [
-      {
-        icon: '🍹',
-        title: 'Fresh Ingredients',
-        text: 'Sourced daily to ensure freshness in every meal.',
-      },
-      {
-        icon: '🍽️',
-        title: 'Eco-friendly Packaging',
-        text: 'Meals are packed in biodegradable containers.',
-      },
-      {
-        icon: '🕒',
-        title: 'On-time Delivery',
-        text: 'Meals delivered at a time convenient to you.',
-      },
+      { icon: '🍹', title: 'Fresh Ingredients', text: 'Sourced daily to ensure freshness in every meal.' },
+      { icon: '🍽️', title: 'Eco-friendly Packaging', text: 'Meals are packed in biodegradable containers.' },
+      { icon: '🕒', title: 'On-time Delivery', text: 'Meals delivered at a time convenient to you.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 1
   },
   {
     title: '15 Days Standard Tiffin Plan',
-    img_path: 'https://example.com/images/tiffin/15days.jpg',
+    img_path: 'https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg',
     star: 4.5,
     reviewCount: 30,
     price: 1500,
     category: 'Tiffin Service',
     description: 'Our 15-day plan offers nutritious, tasty meals ideal for busy professionals or students.',
-    benefits: [
-      'Affordable and balanced meal plan',
-      'Customizable for dietary needs',
-      'High-quality ingredients with doorstep delivery',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Affordable and balanced meal plan' },
+          { label: 'Benefit', value: 'Customizable for dietary needs' },
+          { label: 'Benefit', value: 'High-quality ingredients with doorstep delivery' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '1kg per meal' },
+          { label: 'Servings', value: 'One-person servings' }
+        ]
+      }
     ],
     quantity: 1,
-    dimensions: {
-      weight: '1kg per meal',
-      servings: 'One-person servings',
-    },
     features: [
-      {
-        icon: '💪',
-        title: 'Nutritious Meals',
-        text: 'Balanced meals with essential nutrients.',
-      },
-      {
-        icon: '🚚',
-        title: 'Free Delivery',
-        text: 'Get your meals delivered to your doorstep without extra charges.',
-      },
-      {
-        icon: '♻️',
-        title: 'Eco-friendly Packaging',
-        text: 'Meals are delivered in biodegradable containers.',
-      },
+      { icon: '💪', title: 'Nutritious Meals', text: 'Balanced meals with essential nutrients.' },
+      { icon: '🚚', title: 'Free Delivery', text: 'Get your meals delivered to your doorstep without extra charges.' },
+      { icon: '♻️', title: 'Eco-friendly Packaging', text: 'Meals are delivered in biodegradable containers.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 2
   },
   {
     title: '30 Days Premium Tiffin Plan',
-    img_path: 'https://example.com/images/tiffin/30days.jpg',
+    img_path: 'https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg',
     star: 5,
     reviewCount: 50,
     price: 2800,
     category: 'Tiffin Service',
     description: 'A month-long plan with a wide variety of dishes to keep meals exciting and healthy.',
-    benefits: [
-      'Best value for frequent customers',
-      'Daily variety of meals',
-      'Prioritized delivery and customer support',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Best value for frequent customers' },
+          { label: 'Benefit', value: 'Daily variety of meals' },
+          { label: 'Benefit', value: 'Prioritized delivery and customer support' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '1kg per meal' },
+          { label: 'Servings', value: 'One-person servings' }
+        ]
+      }
     ],
     quantity: 1,
-    dimensions: {
-      weight: '1kg per meal',
-      servings: 'One-person servings',
-    },
     features: [
-      {
-        icon: '🌟',
-        title: 'Variety of Dishes',
-        text: 'New dishes every day to keep meals interesting.',
-      },
-      {
-        icon: '🛡️',
-        title: 'Health-focused',
-        text: 'Meals designed to support a healthy lifestyle.',
-      },
-      {
-        icon: '💼',
-        title: 'Priority Support',
-        text: 'Dedicated support for long-term customers.',
-      },
+      { icon: '🌟', title: 'Variety of Dishes', text: 'New dishes every day to keep meals interesting.' },
+      { icon: '🛡️', title: 'Health-focused', text: 'Meals designed to support a healthy lifestyle.' },
+      { icon: '💼', title: 'Priority Support', text: 'Dedicated support for long-term customers.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 3
   },
   {
     title: 'Lunch Only Plan - 7 Days',
-    img_path: 'https://example.com/images/tiffin/lunch7days.jpg',
+    img_path: 'https://b.zmtcdn.com/data/pictures/4/20526454/a01ae6733e643acef236e7b7eb1357a4_o2_featured_v2.jpg',
     star: 4,
     reviewCount: 10,
     price: 500,
     category: 'Lunch Tiffin',
     description: 'Convenient lunch-only plan for a week. Perfect for individuals needing lunch at work or home.',
-    benefits: [
-      'Simple and affordable',
-      'Delicious, fulfilling lunches',
-      'Ideal for office-goers and students',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Simple and affordable' },
+          { label: 'Benefit', value: 'Delicious, fulfilling lunches' },
+          { label: 'Benefit', value: 'Ideal for office-goers and students' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '1kg per meal' },
+          { label: 'Servings', value: 'One-person servings' }
+        ]
+      }
     ],
     quantity: 1,
-    dimensions: {
-      weight: '1kg per meal',
-      servings: 'One-person servings',
-    },
     features: [
-      {
-        icon: '🍛',
-        title: 'Fulfilling Lunch',
-        text: 'Hearty meals designed to keep you full through the day.',
-      },
-      {
-        icon: '🥗',
-        title: 'Balanced Diet',
-        text: 'Includes a mix of carbs, proteins, and greens.',
-      },
-      {
-        icon: '🚀',
-        title: 'Quick Delivery',
-        text: 'Lunches delivered right in time for your lunch break.',
-      },
+      { icon: '🍛', title: 'Fulfilling Lunch', text: 'Hearty meals designed to keep you full through the day.' },
+      { icon: '🥗', title: 'Balanced Diet', text: 'Includes a mix of carbs, proteins, and greens.' },
+      { icon: '🚀', title: 'Quick Delivery', text: 'Lunches delivered right in time for your lunch break.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 4
@@ -164,32 +148,28 @@ const TiffinPlansData = [
     price: 1000,
     category: 'Dinner Tiffin',
     description: 'Dinner-only plan for 15 days, offering balanced and wholesome meals every night.',
-    benefits: [
-      'Healthy dinners delivered daily',
-      'Perfect for individuals with busy evenings',
-      'Free delivery after work hours',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Healthy dinners delivered daily' },
+          { label: 'Benefit', value: 'Perfect for individuals with busy evenings' },
+          { label: 'Benefit', value: 'Free delivery after work hours' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '1kg per meal' },
+          { label: 'Servings', value: 'One-person servings' }
+        ]
+      }
     ],
     quantity: 1,
-    dimensions: {
-      weight: '1kg per meal',
-      servings: 'One-person servings',
-    },
     features: [
-      {
-        icon: '🍲',
-        title: 'Hearty Dinners',
-        text: 'Warm, filling meals to end your day.',
-      },
-      {
-        icon: '🥘',
-        title: 'Wholesome Ingredients',
-        text: 'Includes proteins, veggies, and grains for a balanced meal.',
-      },
-      {
-        icon: '🌜',
-        title: 'Evening Delivery',
-        text: 'Deliveries timed for dinner hours.',
-      },
+      { icon: '🍲', title: 'Hearty Dinners', text: 'Warm, filling meals to end your day.' },
+      { icon: '🥘', title: 'Wholesome Ingredients', text: 'Includes proteins, veggies, and grains for a balanced meal.' },
+      { icon: '🌜', title: 'Evening Delivery', text: 'Deliveries timed for dinner hours.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 5
@@ -202,32 +182,28 @@ const TiffinPlansData = [
     price: 5000,
     category: 'Family Tiffin',
     description: 'A monthly tiffin service for two, perfect for small families seeking a convenient meal solution.',
-    benefits: [
-      'Balanced meals for two',
-      'Great savings for family plans',
-      'Flexible meal options for family needs',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Balanced meals for two' },
+          { label: 'Benefit', value: 'Great savings for family plans' },
+          { label: 'Benefit', value: 'Flexible meal options for family needs' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '1.5kg per meal' },
+          { label: 'Servings', value: 'Two-person servings' }
+        ]
+      }
     ],
     quantity: 2,
-    dimensions: {
-      weight: '1.5kg per meal',
-      servings: 'Two-person servings',
-    },
     features: [
-      {
-        icon: '👫',
-        title: 'Family-friendly Portions',
-        text: 'Sized appropriately for two people.',
-      },
-      {
-        icon: '💸',
-        title: 'Great Savings',
-        text: 'Affordable for families with busy schedules.',
-      },
-      {
-        icon: '🗓️',
-        title: 'Monthly Convenience',
-        text: 'No need to worry about daily orders.',
-      },
+      { icon: '👫', title: 'Family-friendly Portions', text: 'Sized appropriately for two people.' },
+      { icon: '💸', title: 'Great Savings', text: 'Affordable for families with busy schedules.' },
+      { icon: '🗓️', title: 'Monthly Convenience', text: 'No need to worry about daily orders.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 6
@@ -240,37 +216,36 @@ const TiffinPlansData = [
     price: 9000,
     category: 'Family Tiffin',
     description: 'A convenient monthly meal plan designed for families of four with a variety of dishes.',
-    benefits: [
-      'Delicious meals for the entire family',
-      'Affordable family-sized portions',
-      'Wide variety to satisfy everyone',
+    benefitsAndDimensions: [
+      {
+        heading: 'Benefits',
+        items: [
+          { label: 'Benefit', value: 'Delicious meals for the entire family' },
+          { label: 'Benefit', value: 'Affordable family-sized portions' },
+          { label: 'Benefit', value: 'Wide variety to satisfy everyone' },
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        items: [
+          { label: 'Weight', value: '2.5kg per meal' },
+          { label: 'Servings', value: 'Four-person servings' }
+        ]
+      }
     ],
     quantity: 4,
-    dimensions: {
-      weight: '2.5kg per meal',
-      servings: 'Four-person servings',
-    },
     features: [
-      {
-        icon: '👨‍👩‍👧‍👦',
-        title: 'Perfect for Families',
-        text: 'Meals sized to feed four people.',
-      },
-      {
-        icon: '🍴',
-        title: 'Wide Variety',
-        text: 'Different meals to suit everyone’s tastes.',
-      },
-      {
-        icon: '🎉',
-        title: 'Family Specials',
-        text: 'Includes special family-sized dishes on weekends.',
-      },
+      { icon: '👨‍👩‍👧‍👦', title: 'Perfect for Families', text: 'Meals sized to feed four people.' },
+      { icon: '🍴', title: 'Wide Variety', text: 'Different meals to suit everyone’s tastes.' },
+      { icon: '🎉', title: 'Family Specials', text: 'Includes special family-sized dishes on weekends.' },
     ],
     buttonText: 'Add to Tiffin Bag',
     id: 7
   }
 ];
+
+
+
 
 
 
@@ -322,7 +297,7 @@ function CourseCard({ item }) {
             alt="image"
             width={210}
             height={207}
-            className="rounded-lg"
+            className="rounded-lg bg-transparent"
           />
           <div className="absolute z-10 top-0 left-0 bg-[#cec3b9] py-[6px] px-[13px] rounded-md m-[6px]">
             <p>{item?.tag}</p>

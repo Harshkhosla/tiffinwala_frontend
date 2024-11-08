@@ -34,8 +34,8 @@ function Hero() {
                                     </div>
                                 </form>
                                 <p className="mt-8 text-gray-700 lg:w-10/12">
-                                    Sit amet consectetur adipisicing elit.{" "}
-                                    <a href="#" className="text-yellow-700">connection</a> tenetur nihil quaerat suscipit, sunt dignissimos.
+                                Home-cooked goodness, crafted with a ,{" "}
+                                    <a href="#" className="text-yellow-700">mom’s love</a>  delivered right to your doorstep!
                                 </p>
                             </div>
                             <div className="w-full lg:w-6/12 flex justify-center lg:justify-end -mb-24 lg:-mb-56">

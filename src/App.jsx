@@ -6,6 +6,7 @@ import { Home } from './Pages/Home';
 import { Signup } from './Pages/Auth/Signup';
 import { Signin } from './Pages/Auth/Signin';
 import Tiffin from './Pages/Tiffin';
+import { Tiffinform } from './component/Tiffinform';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/tiffin/:id" element={<Tiffin />} />
+          <Route path="/tiffindetails" element={<Tiffinform />} />
         </Routes>
         <Footer />
       </Router>
