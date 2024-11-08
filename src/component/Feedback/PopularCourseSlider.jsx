@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { MdOutlineStar } from 'react-icons/md';
 import { HiArrowUpRight } from 'react-icons/hi2';
 import { useNavigate } from 'react-router-dom';
+import { Rating } from '../Reviews';
 
 const TiffinPlansData = [
   {
@@ -251,7 +252,7 @@ const TiffinPlansData = [
 
 function PopularCourseSlider() {
   return (
-    <div className="bg-[#f0faf7] ">
+    <div className="bg-[#FEEDE0]  rounded-lg">
       <div className="py-[50px] md:py-[100px]  mx-4 ">
         <div className="overflow-hidden max-w-[1320px] lg:mx-auto">
           <div className="relative flex flex-col lg:flex-row items-center gap-10">
@@ -309,11 +310,7 @@ function CourseCard({ item }) {
           </p>{' '}
           <div className="flex items-center gap-[11px]">
             <div className="flex items-center gap-[6px]">
-              <MdOutlineStar className="size-6 text-starColor" />
-              <MdOutlineStar className="size-6 text-starColor" />
-              <MdOutlineStar className="size-6 text-starColor" />
-              <MdOutlineStar className="size-6 text-starColor" />
-              <MdOutlineStar className="size-6 text-starColor" />
+            <Rating rating ={item?.star}/>
             </div>
             <div>
               <p className="text-[#52565C]  ">({item?.reviewCount})</p>
