@@ -11,7 +11,7 @@ function Stats() {
                             <path d="M2 67V61C2 57.8174 4.10714 54.7652 7.85786 52.5147C11.6086 50.2643 16.6957 49 22 49H42C47.3043 49 52.3914 50.2643 56.1421 52.5147C59.8929 54.7652 62 57.8174 62 61V67" stroke="#FFA500" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
                         </svg>
                         <div className="text-gray-800 pl-12 w-1/2">
-                            <h1 className="font-bold text-2xl lg:text-5xl tracking-1px">450</h1>
+                            <h1 className="font-bold text-2xl lg:text-5xl tracking-1px">50</h1>
                             <h2 className="text-base lg:text-lg mt-4 leading-8 tracking-wide">Happy Clients.</h2>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ function Stats() {
                         </svg>
                         <div className="text-gray-800 w-1/2 pl-12">
                             <h1 className="font-bold text-2xl lg:text-5xl tracking-1px">10+</h1>
-                            <h2 className="text-base lg:text-lg mt-4 leading-8 tracking-wide">Insurance Solutions</h2>
+                            <h2 className="text-base lg:text-lg mt-4 leading-8 tracking-wide">Dilvery Patners</h2>
                         </div>
                     </div>
                     <div class="flex justify-center w-full lg:border-r border-gray-300 py-6">
@@ -33,8 +33,8 @@ function Stats() {
                             <path d="M36 17.1108V35.9997L47.3333 47.3331" stroke="#FFA500" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <div class="text-gray-800 w-1/2 pl-12">
-                            <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">35</h1>
-                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Years of Experience</h2>
+                            <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">10</h1>
+                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Dilivery </h2>
                         </div>
                     </div>
                     <div class="flex justify-center w-full py-6">
@@ -53,8 +53,8 @@ function Stats() {
                             <path d="M10.5 25.45L2 20.8438" stroke="#FFA500" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
                         </svg>
                         <div class="text-gray-800 w-1/2 pl-12">
-                            <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">530</h1>
-                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Projects Completed</h2>
+                            <h1 class="font-bold text-2xl lg:text-5xl tracking-1px">30+</h1>
+                            <h2 class="text-base lg:text-lg mt-4 leading-8 tracking-wide">Locations Covered</h2>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import { Achievement } from '../component/Home/Achivement'
 import Stats from '../component/Home/Stats'
 import Banner from '../component/Home/Banner'
 import StudentFeedback from '../component/Feedback/PopularCourseSlider'
+import { Feedback } from '../component/Home/Feedback'
 
 
 
@@ -18,7 +19,7 @@ export const Home = () => {
         <StudentFeedback />
         <Stats />
         <Achievement />
-        <SlidePricing />
+        <Feedback/>
         <Newsletter />
     </div>
 }

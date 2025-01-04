@@ -1,4 +1,8 @@
 // src/features/userSlice.js
+
+
+const API_URL= "https://tiffin.mycarebilling.com/"
+// const API_URL= "http://localhost:3000/"
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // Async thunk for submitting form data
 export const submitUserData = createAsyncThunk(
@@ -8,7 +12,7 @@ export const submitUserData = createAsyncThunk(
 
       const result = await callApi({
         method: 'POST',
-        url: 'http://localhost:5001/api/v1/user/createuser',
+        url: `${API_URL}/api/v1/user/createuser`,
         body: userData,
       });
       return result;
@@ -24,7 +28,7 @@ export const FormSubmittion = createAsyncThunk(
     try{
       const result = await callApi({
         method :'POST',
-        url : 'http://localhost:5001/api/v1/userplan/formSubmittion',
+        url : `${API_URL}/api/v1/userplan/formSubmittion`,
         body :formsubmittion,
       })
       return result;
@@ -41,7 +45,7 @@ export const login = createAsyncThunk(
     try {
       const result = await callApi({
         method: 'POST',
-        url: 'http://localhost:5001/api/v1/user/login',
+        url: `${API_URL}/api/v1/user/login`,
         body: userData,
       });
 

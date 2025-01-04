@@ -39,6 +39,12 @@ export const Tiffinform = () => {
         <br />
         <br />
         <br />
+
+<div className=" flex-col  ">
+
+    <div>
+        <h2 className="text-2xl justify-center my-20 font-semibold flex gap-2">We Have added your tiffin just fill the form and we will reach to you Our self</h2>
+    </div>
         <form class="max-w-sm mx-auto">
             <div className="flex flex-col">
                 <Input name={"name"} placeholder={"Enter name"} onChange={handleChnage}  value={formsubmittion.name} />
@@ -56,6 +62,7 @@ export const Tiffinform = () => {
         <div className="max-w-sm mx-auto">
             <button onClick={FormSubmit} class="w-full py-4 px-8 text-sm tracking-wide font-semibold text-white bg-orange-500 hover:bg-orange-600 focus:outline-none" >Submit </button>
         </div>
+</div>
 
 
     </div>

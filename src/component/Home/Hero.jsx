@@ -40,7 +40,7 @@ function Hero() {
                             </div>
                             <div className="w-full lg:w-6/12 flex justify-center lg:justify-end -mb-24 lg:-mb-56">
                                 <img
-                                    src="https://tailus.io/sources/blocks/food-delivery/preview/images/food.webp"
+                                    src='/assets/images/img2d.we'
                                     className="relative max-w-full"
                                     alt="food illustration"
                                     loading="lazy"
