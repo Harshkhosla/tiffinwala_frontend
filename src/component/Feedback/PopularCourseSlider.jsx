@@ -75,7 +75,7 @@ const TiffinPlansData = [
   },
   {
     title: '30 Days Premium Tiffin Plan',
-    img_path: 'https://b.zmtcdn.com/data/o2_assets/019409fe8f838312214d9211be010ef31678798444.jpeg',
+    img_path: 'https://img.freepik.com/free-photo/papadom-sauces_74658-93.jpg?ga=GA1.1.1856977439.1735992280&semt=ais_hybrid',
     star: 5,
     reviewCount: 50,
     price: 2800,
@@ -109,7 +109,7 @@ const TiffinPlansData = [
   },
   {
     title: 'Lunch Only Plan - 7 Days',
-    img_path: 'https://b.zmtcdn.com/data/pictures/4/20526454/a01ae6733e643acef236e7b7eb1357a4_o2_featured_v2.jpg',
+    img_path: 'https://img.freepik.com/free-vector/hand-drawn-indian-cuisine-illustration_23-2149333566.jpg?ga=GA1.1.1856977439.1735992280&semt=ais_hybrid',
     star: 4,
     reviewCount: 10,
     price: 500,
@@ -143,7 +143,7 @@ const TiffinPlansData = [
   },
   {
     title: 'Dinner Only Plan - 15 Days',
-    img_path: 'https://example.com/images/tiffin/dinner15days.jpg',
+    img_path: 'https://img.freepik.com/free-vector/hand-drawn-indian-cuisine-illustration_23-2149323580.jpg?ga=GA1.1.1856977439.1735992280&semt=ais_hybrid',
     star: 4.2,
     reviewCount: 18,
     price: 1000,
@@ -177,7 +177,7 @@ const TiffinPlansData = [
   },
   {
     title: 'Monthly Family Plan (2 Members)',
-    img_path: 'https://example.com/images/tiffin/family2.jpg',
+    img_path: 'https://img.freepik.com/free-vector/indian-food-horizontal-banners-set_1284-11948.jpg?ga=GA1.1.1856977439.1735992280&semt=ais_hybrid',
     star: 4.8,
     reviewCount: 35,
     price: 5000,
@@ -211,7 +211,7 @@ const TiffinPlansData = [
   },
   {
     title: 'Monthly Family Plan (4 Members)',
-    img_path: 'https://example.com/images/tiffin/family4.jpg',
+    img_path: 'https://img.freepik.com/free-photo/side-view-casserole-with-sauces_140725-14095.jpg?ga=GA1.1.1856977439.1735992280&semt=ais_hybrid',
     star: 4.9,
     reviewCount: 45,
     price: 9000,

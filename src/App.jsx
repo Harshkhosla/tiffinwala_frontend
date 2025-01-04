@@ -7,6 +7,7 @@ import { Signup } from './Pages/Auth/Signup';
 import { Signin } from './Pages/Auth/Signin';
 import Tiffin from './Pages/Tiffin';
 import { Tiffinform } from './component/Tiffinform';
+import Completion from './Pages/Completion';
 
 function App() {
 
@@ -19,7 +20,8 @@ function App() {
           <Route path="/Signup" element={<Signup />} />
           <Route path="/Signin" element={<Signin />} />
           <Route path="/tiffin/:id" element={<Tiffin />} />
-          <Route path="/tiffindetails" element={<Tiffinform />} />
+          <Route path="/tiffindetails" element={<Tiffinform/>} />
+          <Route path="/form_completion" element={<Completion/>} />
         </Routes>
         <Footer />
       </Router>

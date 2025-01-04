@@ -15,7 +15,7 @@ function Newsletter() {
                                     </label>
                                     <input type="email" id="email" placeholder="johnstark97@gmail.com" className="focus:outline-none focus:border-orange-700 border-gray-300 border rounded-sm py-2 outline-none pl-2 pr-2" />
                                 </div>
-                                <button type="submit" className="focus:outline-none bg-indigo-700 hover:bg-indigo-600 text-white text-base w-full py-3 px-6 rounded">
+                                <button type="submit" className="focus:outline-none bg-orange-600 hover:bg-orange-500 text-white text-base w-full py-3 px-6 rounded">
                                     Subscribe to Newsletter
                                 </button>
                             </div>
